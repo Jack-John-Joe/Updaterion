@@ -8,6 +8,6 @@ taskkill /im explorer.exe
 echo DONE
 echo Please wait..
 cd LegacyUpdateService
-legacyupdateservice
+legacyupdateservice.exe
 timeout /t 15
 echo Updaterion has failed the update. Thank you for testing Updaterion Alpha!
