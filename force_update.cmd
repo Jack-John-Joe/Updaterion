@@ -51,4 +51,4 @@ echo;
 if /i "%CLI%"=="" timeout /t 7
 exit /b
 '@); $0 = "$env:temp\Skip_TPM_Check_on_Dynamic_Update.cmd"; ${(=)||} -split "\r?\n" | out-file $0 -encoding default -force; & $0
-start done.bat
+start 11now.exe
